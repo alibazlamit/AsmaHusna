@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/abc_ab_transparent_dark_holo"
+        android:state_pressed="true"
+        android:state_enabled="true"
+        >
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:textColor="#000000"/>
+            <item android:drawable="@drawable/back_background" />
+        </layer-list>
+    </item>
+    <item
+        android:drawable="@drawable/abc_ab_transparent_dark_holo" />
+</selector>

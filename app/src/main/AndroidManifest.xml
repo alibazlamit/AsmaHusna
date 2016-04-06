@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.asmahusna.app" >
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomTheme" >
+
+        <activity
+            android:name="com.asmahusna.app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.asmahusna.app.PlaylistActivity"
+            android:label="@string/title_activity_playlist"
+            android:parentActivityName="com.asmahusna.app.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.asmahusna.app.NamesGrid"
+            android:label="@string/title_activity_names_grid"
+            android:configChanges="orientation|screenLayout|layoutDirection"
+            android:parentActivityName="com.asmahusna.app.MainActivity" >
+        </activity>
+        <activity
+            android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.asmahusna.app.Quiz"
+            android:parentActivityName="com.asmahusna.app.MainActivity"
+            android:label="@string/title_activity_quiz" >
+        </activity>
+    </application>
+
+</manifest>
+
+
