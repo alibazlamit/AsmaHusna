@@ -86,6 +86,17 @@ public class GridViewCustomAdapter extends ArrayAdapter {
         return null;
     }
 
+    public void ResetImageData(GridView gridView)
+    {
+        for (ImageData data:_imageData) {
+            data.setHinted(false);
+            data.setHidden(true);
+        }
+
+        hintsCount=0;
+        count=0;
+    }
+
     public Map<Integer,Integer> RefreshImage(String Id, GridView gridView,Boolean hinted) {
         Integer ImageId = Integer.parseInt(Id) - 1;
         gridView.smoothScrollToPosition(ImageId);

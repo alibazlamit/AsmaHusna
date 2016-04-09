@@ -61,7 +61,10 @@ public class PlaylistInstance {
         // loop for every file in raw folder
         for (int count = 0; count < fields.length; count++) {
             // Use that if you just need the file name
-            items.add(songsList.get(fields[count].getName()));
+            String fileName=fields[count].getName();
+            String toAdd=songsList.get(fileName);
+
+            items.add(toAdd);
         }
     }
 }

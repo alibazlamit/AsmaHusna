@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\jars\classes.jar"
+        jar="D:\AsmahHusna\AsmaHusna\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\jars\classes.jar"
         jumboMode="false"
-        revision="19.1.0"
+        revision="20.0.0"
         sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
-        <dex dex="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\classes-1a98e6d68095d278ace6e5e9ac8713ddcc7751d3.jar" />
+        <dex dex="D:\AsmahHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\classes-6dd9f8b4513e79bcf41e3f96e5f2f37b985cce7c.jar" />
     </item>
     <item
-        jar="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\libs\app-1.0.jar"
+        jar="D:\AsmahHusna\AsmaHusna\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\jars\classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="6f04bff00a4639e623aa1e068d7a3627817d3c0c">
-        <dex dex="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\app-1.0-e390bc5d3a88a5beb7c14703afd6adcae5b1e8ee.jar" />
-    </item>
-    <item
-        jar="C:\Users\aliba\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
-        <dex dex="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-9249cc5264f0c09916b1868fa4945b0821689b2a.jar" />
-    </item>
-    <item
-        jar="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
+        revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0">
-        <dex dex="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\classes-6fe0a2cf0bb5de58254aabbd98031354732f2543.jar" />
+        <dex dex="D:\AsmahHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\classes-e48b989fb8a5251a1a11615cac3de4aef13349d1.jar" />
     </item>
     <item
-        jar="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\jars\libs\internal_impl-20.0.0.jar"
+        jar="C:\Users\Ali\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
         jumboMode="false"
-        revision="19.1.0"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="D:\AsmahHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-ab64c101e75cdf594193041b1803a23196d12301.jar" />
+    </item>
+    <item
+        jar="D:\AsmahHusna\AsmaHusna\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\jars\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
         sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
-        <dex dex="C:\Users\aliba\Desktop\Personal Files\AsmaHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-0608e607878e29c0ae8f016652bdccd36d218e72.jar" />
+        <dex dex="D:\AsmahHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-708539524cc922f2f73db547898705dd66458ebb.jar" />
+    </item>
+    <item
+        jar="D:\AsmahHusna\AsmaHusna\app\libs\app-1.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6f04bff00a4639e623aa1e068d7a3627817d3c0c">
+        <dex dex="D:\AsmahHusna\AsmaHusna\app\build\intermediates\pre-dexed\debug\app-1.0-0f6c2be6ab2bfa7ac525703c6f33e727cb1b5f98.jar" />
     </item>
 
 </items>

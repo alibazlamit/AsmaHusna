@@ -1,6 +1,8 @@
 package com.asmahusna.app;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,8 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -25,8 +29,8 @@ public class Quiz extends Activity {
 
     GridView gridView;
     GridViewCustomAdapter grisViewCustomeAdapter;
-    int countHinted=0;
-
+    int countHinted = 0;
+    Dialog dialog;
 
 
     @Override
@@ -92,13 +96,73 @@ public class Quiz extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void ShowInfoDialog(View view) {
+        TextView found = (TextView) findViewById(R.id.foundCount);
+        TextView hinstUsed = (TextView) findViewById(R.id.hintsCount);
+        float foundCount = Float.parseFloat(found.getText().toString());
+        float memorized = 0;
+        float hinstUsedCount = 0;
+        if (hinstUsed.getText().toString() != "") {
+            hinstUsedCount = Float.parseFloat(hinstUsed.getText().toString());
+            foundCount = foundCount - hinstUsedCount;
+        }
+        if (foundCount != 0) {
+            memorized = (foundCount / 99) * 100;
+        }
+
+        dialog = new Dialog(Quiz.this);
+
+        dialog.setContentView(R.layout.progress_dialog);
+        Window window = dialog.getWindow();
+        window.setLayout(FlowLayout.LayoutParams.MATCH_PARENT, FlowLayout.LayoutParams.MATCH_PARENT);
+
+        TextView mainInfo = (TextView) dialog.findViewById(R.id.dialogmain);
+        TextView lowerInfo = (TextView) dialog.findViewById(R.id.dialoghintsused);
+        mainInfo.setText("your progress shows that you have memorized" + memorized + "%.");
+        lowerInfo.setText("You have used " + hinstUsedCount + "hints ");
+
+        Button resetBtn = (Button) dialog.findViewById(R.id.reset);
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResetView();
+            }
+        });
+
+        Button backBtn = (Button) dialog.findViewById(R.id.back);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.hide();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void ResetView() {
+
+        grisViewCustomeAdapter.ResetImageData(gridView);
+        grisViewCustomeAdapter.notifyDataSetChanged();
+        gridView.setAdapter(grisViewCustomeAdapter);
+        countHinted=0;
+        SetCountText(0);
+        SetHintCountText(0);
+
+        TextView mainInfo = (TextView) dialog.findViewById(R.id.dialogmain);
+        TextView lowerInfo = (TextView) dialog.findViewById(R.id.dialoghintsused);
+        mainInfo.setText("your progress shows that you have memorized" + 0 + "%.");
+        lowerInfo.setText("You have used " + 0 + "hints ");
+    }
+
     private void SetCountText(int count) {
         TextView countText = (TextView) findViewById(R.id.foundCount);
         countText.setText(Integer.toString(count));
     }
 
-    private void SetHintCountText(int hintsCount){
-        TextView hinstCountText=(TextView)findViewById(R.id.hintsCount);
+    private void SetHintCountText(int hintsCount) {
+        TextView hinstCountText = (TextView) findViewById(R.id.hintsCount);
         hinstCountText.setText(Integer.toString(hintsCount));
     }
 
@@ -114,9 +178,9 @@ public class Quiz extends Activity {
         }
 
         Integer imageIdInteger = Integer.parseInt(imageId);
-        int count=0;
+        int count = 0;
         if (imageIdInteger > 0 && imageIdInteger <= 99) {
-            Map<Integer,Integer> result = grisViewCustomeAdapter.RefreshImage(imageId, gridView,Boolean.FALSE);
+            Map<Integer, Integer> result = grisViewCustomeAdapter.RefreshImage(imageId, gridView, Boolean.FALSE);
             for (Map.Entry<Integer, Integer> entry : result.entrySet()) {
                 count = entry.getKey();
             }
